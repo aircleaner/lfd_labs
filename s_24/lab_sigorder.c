@@ -9,9 +9,9 @@
 
 void (sig_handler) (int);
 
-static int sig_count[NUMSIGS+1];
-static int line = 0;
-static int signumbuffer[6400];
+int sig_count[NUMSIGS+1];
+volatile static int line = 0;
+volatile int signumbuffer[6400];
 
 int main(int argc, char *argv[])
 {
